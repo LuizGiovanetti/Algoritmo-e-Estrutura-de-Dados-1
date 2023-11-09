@@ -1,21 +1,21 @@
 /*
-Implemente uma funÁ„o que receba duas listas est·ticas (l1, l2).
-A funÁ„o dever· retornar a posiÁ„o lista l2 dentro de l1. Caso a lista l2 n„o estiver na l1, retornar "-1".
+Implemente uma fun√ß√£o que receba duas listas est√°ticas (l1, l2).
+A fun√ß√£o dever√° retornar a posi√ß√£o lista l2 dentro de l1. Caso a lista l2 n√£o estiver na l1, retornar "-1".
 
 Exemplo:
 l1 = {1, 2, 3, 4, 5, 6, 7,** 8, 7, 6, 8**, 9, 10}
 l2 = {8, 7, 6, 8}
 
-No exemplo acima, l2 est· (inicia) na posiÁ„o 7 da lista l2.
-Para a implementaÁ„o do exercÌcio, utilize um TAD de listas est·ticas,
-podendo ser o cÛdigo que foi apresentado em aula (disponÌvel no repositÛrio da disciplina no GitHub).
+No exemplo acima, l2 est√° (inicia) na posi√ß√£o 7 da lista l2.
+Para a implementa√ß√£o do exerc√≠cio, utilize um TAD de listas est√°ticas,
+podendo ser o c√≥digo que foi apresentado em aula (dispon√≠vel no reposit√≥rio da disciplina no GitHub).
 
 Input Format
-Na primeira linha, enquanto "-1" n„o for lido, ler n˙meros inteiros.
-Na segunda linha, a mesma restriÁ„o da primeira linha deve ser aplicada.
+Na primeira linha, enquanto "-1" n√£o for lido, ler n√∫meros inteiros.
+Na segunda linha, a mesma restri√ß√£o da primeira linha deve ser aplicada.
 
 Output Format
-Imprimir a posiÁ„o da lista l2 na l1.
+Imprimir a posi√ß√£o da lista l2 na l1.
 */
 #include <stdio.h>
 #include <string.h>
@@ -36,7 +36,7 @@ void criar_lista(Lista *l)
 
 int lista_vazia(Lista *l)
 {
-    return (l->ultimo == -1); //Se for diferente de -1 ela retorna falso, ja que È uma verificacao booleana.
+    return (l->ultimo == -1); //Se for diferente de -1 ela retorna falso, ja que √© uma verificacao booleana.
 }
 
 int lista_cheia(Lista *l)
@@ -60,7 +60,7 @@ int buscar_elemento(Lista *l, int item)
     int i;
     for(i = 0;i <= l->ultimo; i++) //De 0 ate a ultima posicao da lista.
     {
-        if(l->item[i] == item) //Verifica se a lista na posicao "i", È igual ao item.
+        if(l->item[i] == item) //Verifica se a lista na posicao "i", √© igual ao item.
         {
             return i; //Retorna a posicao da lista.
         }
@@ -90,18 +90,18 @@ int remover_elemento(Lista *l, int item)
 int sublista_existente(Lista *l1, Lista *l2)
 {
 
-    if (lista_vazia(l1) || lista_vazia(l2))//Verifica se alguma das listas È vazia.
+    if (lista_vazia(l1) || lista_vazia(l2))//Verifica se alguma das listas √© vazia.
     {
-        return 0; //Retorna 0, indicando que a sublista n„o existe.
+        return 0; //Retorna 0, indicando que a sublista n√£o existe.
     }
 
     int i, j;
 
-    for (i = 0; i <= l1->ultimo - l2->ultimo; i++)//Percorre a lista l1 atÈ que n„o haja mais elementos suficientes para formar a sublista l2.
+    for (i = 0; i <= l1->ultimo - l2->ultimo; i++)//Percorre a lista l1 at√© que n√£o haja mais elementos suficientes para formar a sublista l2.
     {
         if (l1->item[i] == l2->item[0])//Percorre as listas enquanto os elementos forem iguais.
         {
-            for (j = 0; j < l2->ultimo && l2->item[j] == l1->item[i+j]; j++)// Se j for igual ao ˙ltimo Ìndice de l2, ent„o todos os elementos de l2 foram encontrados em l1.
+            for (j = 0; j < l2->ultimo && l2->item[j] == l1->item[i+j]; j++)// Se j for igual ao √∫ltimo √≠ndice de l2, ent√£o todos os elementos de l2 foram encontrados em l1.
             if (j == l2->ultimo)
             {
                 return i; //Retorna i, indicando que a sublista existe em l1.
@@ -109,7 +109,7 @@ int sublista_existente(Lista *l1, Lista *l2)
         }
     }
 
-    return 0; //Retorna 0, indicando que a sublista n„o existe.
+    return 0; //Retorna 0, indicando que a sublista n√£o existe.
 }
 
 int main(void)
@@ -119,7 +119,7 @@ int main(void)
     criar_lista(&l1);
     criar_lista(&l2);
 
-    while(1)//Loop infinito que sÛ ser· interrompido pelo comando 'break'.
+    while(1)//Loop infinito que s√≥ ser√° interrompido pelo comando 'break'.
     {
         scanf("%d", &item);
         if(item == -1)
@@ -128,7 +128,7 @@ int main(void)
         }
         inserir_elemento(&l1, item);
     }
-    while(1)//Loop infinito que sÛ ser· interrompido pelo comando 'break'.
+    while(1)//Loop infinito que s√≥ ser√° interrompido pelo comando 'break'.
     {
         scanf("%d", &item);
         if(item == -1)
