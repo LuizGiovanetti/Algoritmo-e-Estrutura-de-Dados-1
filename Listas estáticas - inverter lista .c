@@ -1,8 +1,8 @@
 /*
-Implemente uma função que receba uma lista estática. A função deverá inverter a lista recebida como entrada.
+Implemente uma funÃ§Ã£o que receba uma lista estÃ¡tica. A funÃ§Ã£o deverÃ¡ inverter a lista recebida como entrada.
 
 Input Format
-Enquanto -1 não for lido, ler números inteiros.
+Enquanto -1 nÃ£o for lido, ler nÃºmeros inteiros.
 
 
 Output Format
