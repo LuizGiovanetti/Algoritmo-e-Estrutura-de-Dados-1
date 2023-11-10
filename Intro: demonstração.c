@@ -12,15 +12,17 @@ A soma dos números deve ser impresso.
 #include <math.h>
 #include <stdlib.h>
 
-int somar(int a, int b){
+int somar(int a, int b)
+{
     int soma;
     
-    soma=a+b;
+    soma = a + b;
     
     return soma;
 }
 
-int main() {
+int main(voic)
+{
     int a, b, soma;
     
     scanf("%d %d", &a, &b);
