@@ -17,7 +17,7 @@ Imprimir o vetor ordenado.
 #include <math.h>
 #include <stdlib.h>
 
-void jeffersort(int v[], int esq, int dir, int m)
+void combinacao(int v[], int esq, int dir, int m)
 {
     int i = esq, j = dir, pivo;
 
@@ -43,10 +43,10 @@ void jeffersort(int v[], int esq, int dir, int m)
         }while(i <+j);
 
         if(j > esq)
-            jeffersort(v, esq, j, m);
+            combinacao(v, esq, j, m);
 
         if(i < dir)
-            jeffersort(v, i, dir, m);
+            combinacao(v, i, dir, m);
 
     }
     else
@@ -67,22 +67,6 @@ void jeffersort(int v[], int esq, int dir, int m)
                 v[i] = aux;
             }
         }
-        /*
-        int troca = 1;
-
-        for(i = esq; (i < dir) && (troca); i++)
-        {
-            troca = 0;
-
-            for(j = esq; j <= dir - i - 1; j++)
-                if(v[j] > v[j + 1])
-                {
-                    int aux = v[j];
-                    v[j] = v[j + 1];
-                    v[j + 1] = aux;
-                    troca = 1;
-                }
-        }*/
     }
 }
 
@@ -100,7 +84,7 @@ int main(void)
 
     scanf("%d", &m);
 
-    jeffersort(v, 0, n - 1, m);
+    combinacao(v, 0, n - 1, m);
 
     for(int i = 0; i < n; i++)
         printf("%d ", v[i]);
