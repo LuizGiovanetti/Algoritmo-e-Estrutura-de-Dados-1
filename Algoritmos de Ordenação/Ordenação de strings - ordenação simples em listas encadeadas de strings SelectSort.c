@@ -53,26 +53,6 @@ int listaE_vazia(ListaE *l){
     return (l == NULL) || (l->head == NULL);
 }
 
-
-/*int procurar(int key, ListaE *l){
-    Cell *aux;
-
-    if (l != NULL){
-        aux = l->head;
-
-        while (aux != NULL){
-            if (aux->item == key)
-                return 1;
-
-            aux = aux->next;
-        }
-    }
-
-    return 0;
-}*/
-
-
-
 void inserir_primeiro(char key[20], ListaE *l)
 {
     Cell *aux;
@@ -86,61 +66,6 @@ void inserir_primeiro(char key[20], ListaE *l)
 
     l->head = aux;
 }
-
-
-/*void inserir_ultimo(int key, ListaE *l){
-    Cell *aux, *novo;
-
-    if (l == NULL)
-        l = criar_listaE();
-
-    if (listaE_vazia(l))
-        inserir_primeiro(key, l);
-    else{
-        aux = l->head;
-
-        while(aux->next != NULL)
-            aux = aux->next;
-
-        novo = criar_celula(key);
-
-        aux->next = novo;
-    }
-}
-
-
-int remover(int key, ListaE *l){
-    Cell *auxA, *auxP = NULL;
-
-    if (!listaE_vazia(l)){
-        auxA = l->head;
-
-        if(auxA->item == key){
-            l->head = l->head->next;
-        }else{
-            auxP = auxA;
-
-            while((auxA != NULL) && (auxA->item != key)){
-                    auxP = auxA;
-
-                auxA = auxA->next;
-            }
-        }
-
-        if (auxA != NULL){
-            if (auxP != NULL)
-                auxP->next = auxA->next;
-
-            free(auxA);
-
-            return 1;
-        }
-
-    }
-
-    return 0;
-}*/
-
 
 void imprimir(ListaE *l)
 {
@@ -158,7 +83,6 @@ void imprimir(ListaE *l)
         }
     }
 }
-
 
 void liberar_LE(ListaE *l)
 {
@@ -199,24 +123,6 @@ void select_sort(ListaE *l)
         }
     }
 }
-
-
-/*int tamanho_LE(ListaE *l){
-    Cell *aux;
-    int tam = 0;
-
-     if (!listaE_vazia(l)){
-        aux = l->head;
-
-        while(aux != NULL){
-            aux = aux->next;
-
-            tam++;
-        }
-    }
-
-    return tam;
-}*/
 
 int main(void)
 {
