@@ -37,25 +37,6 @@ void troca(char **vstr, int p1, int p2)
     vstr[p2] = str;
 }
 
-/*void select_sort(char **vstr, int n)
-{
-    int p, i, j;
-
-    for(i = n - 1; i > 0; i--)
-    {
-        p = i;
-
-        for(j = 0; j < i; j++)
-        {
-            if(comparar(vstr[j], vstr[p]) > 0)
-                p = j;
-        }
-
-        if(p != i)
-            troca(vstr, p, i);
-    }
-}*/
-
 void select_sort(char **vstr, int n)
 {
     int p, i, j;
