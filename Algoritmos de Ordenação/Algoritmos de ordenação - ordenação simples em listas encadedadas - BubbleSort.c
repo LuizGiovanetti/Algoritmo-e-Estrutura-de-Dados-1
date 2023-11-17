@@ -195,7 +195,7 @@ int tamanho_LE(ListaE *l){
     return tam;
 }
 
-void jeffersort(ListaE *l)
+void bubblesort(ListaE *l)
 {
     int tam = tamanho_LE(l);
     Cell *auxA, *auxB;
@@ -240,7 +240,7 @@ int main(void)
             inserir_ultimo(x, l);
     }
 
-    jeffersort(l);
+    bubblesort(l);
 
     imprimir(l);
 
