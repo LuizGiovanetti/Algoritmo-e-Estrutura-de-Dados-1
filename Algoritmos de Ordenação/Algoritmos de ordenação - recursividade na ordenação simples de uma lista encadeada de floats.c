@@ -112,59 +112,6 @@ void bubble_sort_recursivo(ListaE *l)
         bubble_sort_recursivo(l);
 }
 
-
-/*int bubble_sort_recursivo(Cell* inicio, Cell* fim) //implementado pelo professor
-{
-    if(inicio == fim)
-        return 0;
-
-    Cell* atual = inicio;
-    Cell* proximo = inicio->next;
-
-    while(proximo != NULL)
-    {
-        if(atual->item > proximo->item)
-        {
-            float temp = atual->item;
-            atual->item = proximo->item;
-            proximo->item = temp;
-        }
-        atual = proximo;
-        proximo = proximo->next;
-    }
-
-    return bubble_sort_recursivo(inicio, fim->next);
-}
-
-void bubble_sort(ListaE* l)//implementado pelo professor
-{
-    if (listaE_vazia(l))
-        return;
-
-    int trocado;
-    Cell* atual;
-    Cell* anterior = NULL;
-
-    do{
-        trocado = 0;
-        atual = l->head;
-
-        while(atual->next != anterior)
-        {
-            if(atual->item > atual->next->item)
-            {
-                float temp = atual->item;
-                atual->item = atual->next->item;
-                atual->next->item = temp;
-                trocado = 1;
-            }
-            atual = atual->next;
-        }
-        anterior = atual;
-
-    }while(trocado);
-}*/
-
 int main(void)
 {
     ListaE* lista = criar_listaE();
