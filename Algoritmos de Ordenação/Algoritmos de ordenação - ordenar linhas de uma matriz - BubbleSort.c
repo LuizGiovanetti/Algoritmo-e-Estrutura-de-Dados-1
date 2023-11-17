@@ -14,9 +14,9 @@ Imprimir a matriz com as linhas ordenadas.
 #include <math.h>
 #include <stdlib.h>
 
-void inverter_linha(int l, int c, int m[l][c])
+void ordenar_linhas_decrescente(int l, int c, int m[l][c])
 {
-    for(int i = 0; i <= l; i++)
+    for(int i = 0; i < l; i++)
     {
         for(int j = 0; j < c; j++)
         {
@@ -32,29 +32,6 @@ void inverter_linha(int l, int c, int m[l][c])
         }
     }
 }
-
-/*int inverter_linha(int l, int c, int m[l][c])
-{
-    int aux;
-    if(( l < 0) || (c < 0))
-        return 0;
-    else
-    {
-        for(int j = 0; j < c; j++)
-        {
-            int i = 0;
-            while((m[l][i] < m[l][i + 1]) && (i < c - 1))
-            {
-                aux = m[l][i];
-                m[l][i] = m[l][i + 1];
-                m[l][i + 1] = aux;
-                i++;
-            }
-        }
-
-    }
-    return inverter_linha(l - 1, c, m);
-}*/
 
 void imprimir_matriz(int l, int c, int m[l][c])
 {
@@ -79,7 +56,7 @@ int main(void)
             scanf("%d", &m[i][j]);
     }
 
-    inverter_linha(l - 1, c, m);
+    ordenar_linhas_decrescente(l - 1, c, m);
     imprimir_matriz(l, c, m);
 
     return 0;
